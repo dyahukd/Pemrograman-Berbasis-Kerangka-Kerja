@@ -1,10 +1,22 @@
 # Week 9 – Proyek CodeIgniter 4
 
-Folder ini berisi dua proyek aplikasi web yang dikembangkan menggunakan **CodeIgniter 4** sebagai bagian dari mata kuliah Pemrograman Berbasis Kerangka Kerja.
+Folder ini berisi tiga proyek aplikasi web yang dikembangkan menggunakan **CodeIgniter 4** sebagai bagian dari mata kuliah Pemrograman Berbasis Kerangka Kerja.
 
 ## Daftar Proyek
 
-### 1. DIET TOMORROW – Toko Roti Online
+### 1. Latihan 1 – Pengelolaan Data Mahasiswa
+
+Aplikasi pengelolaan data mahasiswa yang dikembangkan untuk menerapkan konsep dasar CodeIgniter 4, mulai dari konfigurasi framework, routing, controller, penggunaan template, hingga pengelolaan database dan autentikasi.
+
+**Fitur Utama:**
+- Halaman About dan Contact menggunakan Bootstrap
+- Dashboard admin menggunakan template SB Admin 2
+- Pengelolaan data mahasiswa (CRUD)
+- Unggah dan pengelolaan foto mahasiswa
+- Login dan logout administrator
+- Pembatasan akses halaman admin menggunakan session dan authentication filter
+
+### 2. DIET TOMORROW – Toko Roti Online
 
 Aplikasi toko roti online yang memungkinkan pelanggan melihat katalog produk, mencari produk, menambahkan produk ke keranjang, dan melakukan pemesanan. Aplikasi ini juga menyediakan dashboard admin untuk mengelola produk dan pesanan pelanggan.
 
@@ -16,7 +28,7 @@ Aplikasi toko roti online yang memungkinkan pelanggan melihat katalog produk, me
 - Dashboard admin dan pengelolaan produk
 - Pengelolaan pesanan
 
-### 2. SIAKAD – Sistem Informasi Akademik
+### 3. SIAKAD – Sistem Informasi Akademik
 
 Aplikasi sistem informasi akademik berbasis web yang dirancang untuk mengelola aktivitas dan informasi akademik dalam suatu institusi pendidikan.
 
@@ -37,45 +49,62 @@ Aplikasi sistem informasi akademik berbasis web yang dirancang untuk mengelola a
 
 ## Cara Menjalankan
 
-Ikuti langkah-langkah berikut untuk menjalankan masing-masing proyek:
+Ikuti langkah-langkah berikut untuk menjalankan masing-masing proyek.
+
+### 1. Persiapan
 
 1. Clone atau unduh repository ini.
-2. Buka folder proyek yang ingin dijalankan (`diet-tomorrow` atau `siakad`) melalui terminal.
-3. Instal dependensi dengan perintah:
+2. Buka folder proyek yang ingin dijalankan melalui terminal.
+3. Instal dependensi menggunakan perintah:
 
    ```bash
    composer install
    ```
 
 4. Salin file `env` menjadi `.env`, kemudian sesuaikan konfigurasi database.
-5. Buat database MySQL sesuai dengan konfigurasi proyek.
-6. Jalankan migrasi database dan seeder:
+5. Buat database MySQL sesuai dengan konfigurasi pada masing-masing proyek.
 
-   ```bash
-   php spark migrate
-   php spark db:seed AdminSeeder
-   ```
+### 2. Menjalankan Latihan 1
 
-   Untuk SIAKAD, gunakan:
+Masuk ke folder `Week 9/latihan1`, kemudian jalankan:
 
-   ```bash
-   php spark db:seed SiakadSeeder
-   ```
+```bash
+php spark migrate
+php spark db:seed UserSeeder
+php spark serve --port 8000
+```
 
-   Untuk DIET TOMORROW, jalankan seeder produk jika diperlukan:
+Buka aplikasi melalui browser:
 
-   ```bash
-   php spark db:seed ProductSeeder
-   ```
+`http://localhost:8000`
 
-7. Jalankan server pengembangan:
+### 3. Menjalankan DIET TOMORROW
 
-   ```bash
-   php spark serve
-   ```
+Masuk ke folder `Week 9/diet-tomorrow`, kemudian jalankan migrasi dan seeder yang diperlukan:
 
-8. Buka aplikasi melalui browser:
+```bash
+php spark migrate
+php spark db:seed AdminSeeder
+php spark db:seed ProductSeeder
+php spark serve
+```
 
-   `http://localhost:8080`
+Buka aplikasi melalui browser:
 
-**Catatan:** Pastikan PHP, Composer, dan MySQL sudah terpasang dan berjalan sebelum menjalankan aplikasi. Konfigurasi database dan seeder yang tersedia dapat berbeda pada setiap proyek.
+`http://localhost:8080`
+
+### 4. Menjalankan SIAKAD
+
+Masuk ke folder `Week 9/siakad`, kemudian jalankan:
+
+```bash
+php spark migrate
+php spark db:seed SiakadSeeder
+php spark serve
+```
+
+Buka aplikasi melalui browser:
+
+`http://localhost:8080`
+
+**Catatan:** Pastikan PHP, Composer, dan MySQL sudah terpasang dan berjalan sebelum menjalankan aplikasi. Sesuaikan konfigurasi database pada file `.env` masing-masing proyek. Perintah seeder dan konfigurasi port dapat disesuaikan dengan implementasi setiap aplikasi.
