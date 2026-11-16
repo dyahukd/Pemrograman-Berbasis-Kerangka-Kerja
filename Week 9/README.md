@@ -1,81 +1,81 @@
-# Week 9 – CodeIgniter 4 Projects
+# Week 9 – Proyek CodeIgniter 4
 
-This folder contains two web application projects developed using **CodeIgniter 4** as part of the Pemrograman Berbasis Kerangka Kerja course.
+Folder ini berisi dua proyek aplikasi web yang dikembangkan menggunakan **CodeIgniter 4** sebagai bagian dari mata kuliah Pemrograman Berbasis Kerangka Kerja.
 
-## Projects
+## Daftar Proyek
 
-### 1. DIET TOMORROW – Online Bakery
+### 1. DIET TOMORROW – Toko Roti Online
 
-An online bakery web application that allows customers to browse products, search for items, add products to their cart, and place orders. It also provides an admin dashboard for managing products and customer orders.
+Aplikasi toko roti online yang memungkinkan pelanggan melihat katalog produk, mencari produk, menambahkan produk ke keranjang, dan melakukan pemesanan. Aplikasi ini juga menyediakan dashboard admin untuk mengelola produk dan pesanan pelanggan.
 
-**Main Features:**
-- Customer registration and login
-- Product catalog, search, and category filtering
-- Shopping cart and checkout
-- Order history
-- Admin dashboard and product management
-- Order management
+**Fitur Utama:**
+- Registrasi dan login pelanggan
+- Katalog produk, pencarian, dan filter kategori
+- Keranjang belanja dan checkout
+- Riwayat pesanan
+- Dashboard admin dan pengelolaan produk
+- Pengelolaan pesanan
 
-### 2. SIAKAD – Academic Information System
+### 2. SIAKAD – Sistem Informasi Akademik
 
-A web-based academic information system designed to manage academic activities and information within an educational institution.
+Aplikasi sistem informasi akademik berbasis web yang dirancang untuk mengelola aktivitas dan informasi akademik dalam suatu institusi pendidikan.
 
-**Main Features:**
-- Role-based login for Admin, Lecturer, and Student
-- Admin dashboard
-- Student, lecturer, and course data management
-- Course registration (KRS)
-- Academic results (KHS) and transcript pages
+**Fitur Utama:**
+- Login berdasarkan peran Admin, Dosen, dan Mahasiswa
+- Dashboard admin
+- Pengelolaan data mahasiswa, dosen, dan mata kuliah
+- Pengisian Kartu Rencana Studi (KRS)
+- Halaman hasil studi (KHS) dan transkrip nilai
 
-## Technologies
+## Teknologi yang Digunakan
 
 - PHP
 - CodeIgniter 4
 - MySQL
-- HTML, CSS, and JavaScript
+- HTML, CSS, dan JavaScript
 - Bootstrap
 
-## How to Run
+## Cara Menjalankan
 
-Follow these steps for either project:
+Ikuti langkah-langkah berikut untuk menjalankan masing-masing proyek:
 
-1. Clone or download this repository.
-2. Open the desired project folder (`diet-tomorrow` or `siakad`) in the terminal.
-3. Install dependencies:
+1. Clone atau unduh repository ini.
+2. Buka folder proyek yang ingin dijalankan (`diet-tomorrow` atau `siakad`) melalui terminal.
+3. Instal dependensi dengan perintah:
 
    ```bash
    composer install
    ```
 
-4. Copy the `env` file to `.env` and configure the database settings.
-5. Create the corresponding MySQL database.
-6. Run database migrations and seeders:
+4. Salin file `env` menjadi `.env`, kemudian sesuaikan konfigurasi database.
+5. Buat database MySQL sesuai dengan konfigurasi proyek.
+6. Jalankan migrasi database dan seeder:
 
    ```bash
    php spark migrate
    php spark db:seed AdminSeeder
    ```
 
-   For SIAKAD, use:
+   Untuk SIAKAD, gunakan:
 
    ```bash
    php spark db:seed SiakadSeeder
    ```
 
-   For DIET TOMORROW, run the available seeders as needed:
+   Untuk DIET TOMORROW, jalankan seeder produk jika diperlukan:
 
    ```bash
    php spark db:seed ProductSeeder
    ```
 
-7. Start the development server:
+7. Jalankan server pengembangan:
 
    ```bash
    php spark serve
    ```
 
-8. Open the application in your browser:
+8. Buka aplikasi melalui browser:
 
-   - `http://localhost:8080`
+   `http://localhost:8080`
 
-**Note:** Make sure PHP, Composer, and MySQL are installed and running before starting the applications. Database configuration and available seeders may differ between projects.
+**Catatan:** Pastikan PHP, Composer, dan MySQL sudah terpasang dan berjalan sebelum menjalankan aplikasi. Konfigurasi database dan seeder yang tersedia dapat berbeda pada setiap proyek.
