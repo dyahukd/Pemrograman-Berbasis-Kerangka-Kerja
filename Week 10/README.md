@@ -1,4 +1,4 @@
-# ShopEase
+# Week 10 - ShopEase
 
 ShopEase merupakan aplikasi e-commerce berbasis web yang dikembangkan menggunakan **CodeIgniter 4**. Aplikasi ini menyediakan fitur belanja online, mulai dari melihat katalog produk, mengelola keranjang, melakukan checkout, hingga memantau pesanan.
 
